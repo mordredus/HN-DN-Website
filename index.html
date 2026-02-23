@@ -1,471 +1,276 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HN-DN Official Website</title>
-</head>
-<body>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HN-DN Official</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@400;700;900&display=swap" rel="stylesheet">
 
-    <!-- Header / Navigation -->
-    <header id="header">
-        <div class="logo"><h1>HN-DN</h1></div>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#concept">Concept</a></li>
-                <li><a href="#members">Members</a></li>
-                <li><a href="#discography">Discography</a></li>
-                <li><a href="#presave">Pre-Save</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Hero Section -->
-    <section id="home" class="dark-hero">
-        <div class="hero-content">
-            <h2 data-glow>HN-DN</h2>
-            <p class="tagline">Existential Chaos. Global Unity. Futuristic Sound.</p>
-            <div class="scroll-indicator">↓ Scroll</div>
-        </div>
-    </section>
-
-    <!-- Concept Section -->
-    <section id="concept" class="dark-section">
-        <h2>Concept</h2>
-        <p>HN-DN explores <strong>Existentialism</strong> through music, identity, and chaos.</p>
-        <h3>Meaning Behind Their Name</h3>
-        <p>Derived from <strong>Hun Dun</strong>, symbolizing primordial chaos in Chinese philosophy.</p>
-    </section>
-
-    <!-- Members Section -->
-    <section id="members" class="dark-section">
-        <h2>Members</h2>
-        <div class="members-grid">
-            <!-- Members Cards -->
-            <div class="member-card" data-glow>
-                <img src="images/ezra.jpg" alt="Ezra Milagrosa Diwa">
-                <h3>Ezra Milagrosa Diwa</h3>
-                <p>Leader, Filipino. Producer, singer, dancer.</p>
-            </div>
-            <div class="member-card" data-glow>
-                <img src="images/sally.jpg" alt="Sally Armitage">
-                <h3>Sally Armitage</h3>
-                <p>Vocalist, British. Lead dancer.</p>
-            </div>
-            <div class="member-card" data-glow>
-                <img src="images/sariyah.jpg" alt="Sariyah Lie">
-                <h3>Sariyah Lie</h3>
-                <p>Sub-vocalist, majestic 4–5 octave range. Indonesian-Chinese.</p>
-            </div>
-            <div class="member-card" data-glow>
-                <img src="images/slyvan.jpg" alt="Slyvan Montgomery">
-                <h3>Slyvan Montgomery</h3>
-                <p>American rapper and dancer. Skilled in dance battles.</p>
-            </div>
-            <div class="member-card" data-glow>
-                <img src="images/hyunseok.jpg" alt="Lee Hyun-Seok">
-                <h3>Lee Hyun-Seok</h3>
-                <p>South Korean-American main dancer and rapper.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Discography Section -->
-    <section id="discography" class="dark-section">
-        <h2>Discography</h2>
-        <div class="albums-grid">
-            <!-- Album Cards -->
-            <div class="album-card" data-glow>
-                <img src="images/dreamweaver.jpg" alt="Dreamweaver EP">
-                <h3>Dreamweaver (Debut EP)</h3>
-                <ul>
-                    <li>Dreamweaver (Title Track)</li>
-                    <li>Wave</li>
-                    <li>Immutable</li>
-                    <li>No-Nonsense</li>
-                    <li>Tuonela (B-Side)</li>
-                </ul>
-            </div>
-            <div class="album-card" data-glow>
-                <img src="images/worlds-stage.jpg" alt="The World's a Stage">
-                <h3>The World's a Stage (Single Album)</h3>
-                <ul><li>The World's a Stage</li></ul>
-            </div>
-            <div class="album-card" data-glow>
-                <img src="images/schmetterling.jpg" alt="Schmetterling EP">
-                <h3>Schmetterling (2nd EP)</h3>
-                <ul>
-                    <li>Schmetterling</li>
-                    <li>Nothing But My Love</li>
-                    <li>Spotlight</li>
-                </ul>
-            </div>
-            <div class="album-card" data-glow>
-                <img src="images/instrumental.jpg" alt="Hun-Dun Hezou/Wan-Deon Hapzau">
-                <h3>Hun-Dun Hezou/Wan-Deon Hapzau (Instrumental Album)</h3>
-                <ul><li>Instrumental Tracks</li></ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pre-Save / Streaming Section -->
-    <section id="presave" class="dark-section">
-        <h2>Pre-Save / Stream</h2>
-        <p>Listen to HN-DN on your favorite platform:</p>
-        <div class="presave-buttons">
-            <a href="#" class="btn spotify">Spotify</a>
-            <a href="#" class="btn apple">Apple Music</a>
-            <a href="#" class="btn youtube">YouTube Music</a>
-            <a href="#" class="btn tidal">Tidal</a>
-        </div>
-    </section>
-
-    <!-- Social Media Section -->
-    <section id="social" class="dark-section">
-        <h2>Follow Us</h2>
-        <div class="social-links">
-            <a href="#" class="social instagram">Instagram</a>
-            <a href="#" class="social twitter">X/Twitter</a>
-            <a href="#" class="social tiktok">TikTok</a>
-            <a href="#" class="social youtube">YouTube</a>
-        </div>
-    </section>
-
-    <!-- Newsletter Signup -->
-    <section id="newsletter" class="dark-section">
-        <h2>Join Our Newsletter</h2>
-        <p>Get updates on new releases, merch, and tours.</p>
-        <form action="#" method="post" class="newsletter-form">
-            <input type="email" name="email" placeholder="Your email address" required>
-            <button type="submit" class="btn">Subscribe</button>
-        </form>
-    </section>
-
-    <!-- Contact / Footer -->
-    <section id="contact" class="dark-section">
-        <h2>Contact</h2>
-        <p>For inquiries, reach us at <a href="mailto:contact@aplcorp.com">contact@aplcorp.com</a></p>
-        <p>&copy; 2026 APL LABELS. All rights reserved.</p>
-    </section>
-
-</body>
-</html>
-<style>
+<!-- ========== CSS Embedded ========== -->
 <style>
 /* =================== Base Styles =================== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Helvetica Neue', 'Arial', sans-serif;
-}
-
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Helvetica Neue',Arial,sans-serif; }
 body {
-    /* Full-screen GIF background */
     background: url('images/concert.gif') no-repeat center center fixed;
     background-size: cover;
-
-    /* Black overlay for readability */
     position: relative;
-    color: #fff;
-    line-height: 1.6;
+    color:#fff;
+    line-height:1.6;
 }
-
-/* Overlay layer for darkening the GIF */
 body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.65); /* Dark overlay */
-    z-index: -1;
+    content:'';
+    position:fixed;
+    top:0; left:0;
+    width:100%; height:100%;
+    background: rgba(0,0,0,0.65);
+    z-index:-1;
 }
-
-/* Ensure sections are above the overlay */
-.dark-section,
-#header,
-.hero-content,
-.members-grid,
-.albums-grid,
-.presave-buttons,
-.social-links,
-.newsletter-form,
-#contact {
-    position: relative;
-    z-index: 1;
-}
+.dark-section,#header,.hero-content,.members-grid,.albums-grid,.presave-buttons,.social-links,.newsletter-form,#contact { position:relative; z-index:1; }
 
 /* =================== Header =================== */
 header {
-    position: fixed;
-    top: 0;
-    width: 100%;
+    position: fixed; top:0; width:100%;
     background: rgba(0,0,0,0.85);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 50px;
-    z-index: 999;
-    border-bottom: 1px solid #333;
+    display:flex; justify-content:space-between; align-items:center;
+    padding:15px 50px; z-index:999;
+    border-bottom:1px solid #333;
 }
-
-header .logo h1 {
-    font-size: 32px;
-    color: #fff;
-    font-weight: bold;
-    letter-spacing: 2px;
-}
-
-header nav ul {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-}
-
-header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-    position: relative;
-    padding: 5px 0;
-}
-
-header nav ul li a::after {
-    content: '';
-    position: absolute;
-    width: 0%;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background: #fff;
-    transition: 0.3s ease;
-}
-
-header nav ul li a:hover::after {
-    width: 100%;
-}
+header .logo h1 { font-size:32px; color:#fff; font-weight:bold; letter-spacing:2px; }
+header nav ul { list-style:none; display:flex; gap:25px; }
+header nav ul li a { color:#fff; text-decoration:none; font-weight:600; position:relative; padding:5px 0; }
+header nav ul li a::after { content:''; position:absolute; width:0%; height:2px; bottom:0; left:0; background:#fff; transition:0.3s ease; }
+header nav ul li a:hover::after { width:100%; }
 
 /* =================== Hero Section =================== */
-#home {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    position: relative;
-}
-
-.hero-content h2 {
-    font-size: 70px;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    margin-bottom: 15px;
-}
-
-.hero-content .tagline {
-    font-size: 24px;
-    letter-spacing: 1px;
-    opacity: 0.8;
-}
-
-.scroll-indicator {
-    position: absolute;
-    bottom: 30px;
-    font-size: 28px;
-    opacity: 0.7;
-    animation: bounce 2s infinite;
-}
-
-@keyframes bounce {
-    0%,20%,50%,80%,100% { transform: translateY(0);}
-    40% { transform: translateY(-15px);}
-    60% { transform: translateY(-8px);}
-}
+#home { height:100vh; display:flex; justify-content:center; align-items:center; text-align:center; position:relative; }
+.hero-content h2 { font-size:70px; font-weight:900; text-transform:uppercase; letter-spacing:3px; margin-bottom:15px; }
+.hero-content .tagline { font-size:24px; letter-spacing:1px; opacity:0.8; }
+.scroll-indicator { position:absolute; bottom:30px; font-size:28px; opacity:0.7; animation:bounce 2s infinite; }
+@keyframes bounce {0%,20%,50%,80%,100%{transform:translateY(0);}40%{transform:translateY(-15px);}60%{transform:translateY(-8px);}}
 
 /* =================== Sections =================== */
-.dark-section {
-    padding: 100px 50px;
-    background: transparent;
-}
-
-.dark-section h2 {
-    font-size: 48px;
-    text-align: center;
-    margin-bottom: 50px;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
+.dark-section { padding:100px 50px; background:transparent; }
+.dark-section h2 { font-size:48px; text-align:center; margin-bottom:50px; font-weight:900; text-transform:uppercase; letter-spacing:2px; }
 
 /* =================== Members =================== */
-.members-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
-}
-
-.member-card {
-    background: rgba(255,255,255,0.05);
-    border-radius: 10px;
-    overflow: hidden;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.member-card img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.member-card h3 {
-    font-size: 22px;
-    margin: 15px 0 10px 0;
-    font-weight: 700;
-}
-
-.member-card p {
-    font-size: 16px;
-    padding: 0 15px 15px 15px;
-    color: #ccc;
-}
-
-.member-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 0 20px rgba(255,255,255,0.2);
-}
-
-.member-card:hover img {
-    transform: scale(1.02);
-}
+.members-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:40px; }
+.member-card { background: rgba(255,255,255,0.05); border-radius:10px; overflow:hidden; text-align:center; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor:pointer; }
+.member-card img { width:100%; height:300px; object-fit:cover; transition:transform 0.3s ease; }
+.member-card h3 { font-size:22px; margin:15px 0 10px 0; font-weight:700; }
+.member-card p { font-size:16px; padding:0 15px 15px 15px; color:#ccc; }
+.member-card:hover { transform:translateY(-8px); box-shadow:0 0 20px rgba(255,255,255,0.2); }
+.member-card:hover img { transform:scale(1.02); }
 
 /* =================== Albums =================== */
-.albums-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
-}
-
-.album-card {
-    background: rgba(255,255,255,0.05);
-    border-radius: 10px;
-    overflow: hidden;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.album-card img {
-    width: 100%;
-    height: 280px;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.album-card h3 {
-    font-size: 20px;
-    margin: 15px 0 10px 0;
-    font-weight: 700;
-}
-
-.album-card ul {
-    list-style: none;
-    padding: 0 15px 15px 15px;
-    color: #ccc;
-}
-
-.album-card li {
-    padding: 5px 0;
-    border-bottom: 1px solid #222;
-    font-size: 15px;
-}
-
-.album-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 0 20px rgba(255,255,255,0.2);
-}
-
-.album-card:hover img {
-    transform: scale(1.02);
-}
+.albums-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:40px; }
+.album-card { background: rgba(255,255,255,0.05); border-radius:10px; overflow:hidden; text-align:center; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor:pointer; }
+.album-card img { width:100%; height:280px; object-fit:cover; transition: transform 0.3s ease; }
+.album-card h3 { font-size:20px; margin:15px 0 10px 0; font-weight:700; }
+.album-card ul { list-style:none; padding:0 15px 15px 15px; color:#ccc; }
+.album-card li { padding:5px 0; border-bottom:1px solid #222; font-size:15px; }
+.album-card:hover { transform:translateY(-8px); box-shadow:0 0 20px rgba(255,255,255,0.2); }
+.album-card:hover img { transform:scale(1.02); }
 
 /* =================== Buttons =================== */
-.presave-buttons, .social-links {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-top: 20px;
-}
-
-.btn, .social a {
-    display: inline-block;
-    padding: 12px 25px;
-    border-radius: 5px;
-    font-weight: 700;
-    text-decoration: none;
-    color: #fff;
-    border: 1px solid #fff;
-    transition: all 0.3s ease;
-    background: transparent;
-}
-
-.btn:hover, .social a:hover {
-    background: #fff;
-    color: #000;
-}
+.presave-buttons, .social-links { display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin-top:20px; }
+.btn, .social a { display:inline-block; padding:12px 25px; border-radius:5px; font-weight:700; text-decoration:none; color:#fff; border:1px solid #fff; transition:all 0.3s ease; background:transparent; }
+.btn:hover, .social a:hover { background:#fff; color:#000; }
 
 /* =================== Newsletter =================== */
-.newsletter-form {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-    margin-top: 20px;
-}
-
-.newsletter-form input[type="email"] {
-    padding: 12px 20px;
-    border-radius: 5px;
-    border: 1px solid #fff;
-    background: #111;
-    color: #fff;
-    font-size: 16px;
-    outline: none;
-}
-
-.newsletter-form input[type="email"]:focus {
-    border-color: #fff;
-}
+.newsletter-form { display:flex; justify-content:center; gap:15px; flex-wrap:wrap; margin-top:20px; }
+.newsletter-form input[type="email"] { padding:12px 20px; border-radius:5px; border:1px solid #fff; background:#111; color:#fff; font-size:16px; outline:none; }
+.newsletter-form input[type="email"]:focus { border-color:#fff; }
 
 /* =================== Footer =================== */
-#contact p a {
-    color: #fff;
-    text-decoration: underline;
-    transition: color 0.3s ease;
-}
+#contact p a { color:#fff; text-decoration:underline; transition:color 0.3s ease; }
+#contact p a:hover { color:#ccc; }
 
-#contact p a:hover {
-    color: #ccc;
-}
+/* =================== Fade-in =================== */
+.fade-in { opacity:1 !important; transform:translateY(0) !important; transition:all 1s ease-out; }
+.dark-section,#home { opacity:0; transform:translateY(50px); }
 
 /* =================== Responsive =================== */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        padding: 10px 20px;
-    }
-    header nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-    .hero-content h2 {
-        font-size: 50px;
-    }
+@media (max-width:768px) {
+    header { flex-direction:column; padding:10px 20px; }
+    header nav ul { flex-direction:column; gap:10px; }
+    .hero-content h2 { font-size:50px; }
 }
 </style>
+</head>
+<body>
+
+<!-- ===== Header ===== -->
+<header id="header">
+    <div class="logo"><h1>HN-DN</h1></div>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#members">Members</a></li>
+            <li><a href="#albums">Albums</a></li>
+            <li><a href="#presave">Pre-Save</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- ===== Hero Section ===== -->
+<section id="home">
+    <div class="hero-content">
+        <h2>HN-DN</h2>
+        <p class="tagline">Existentialism. Chaos. Music.</p>
+    </div>
+    <div class="scroll-indicator">&#x21E3;</div>
+</section>
+
+<!-- ===== Members Section ===== -->
+<section id="members" class="dark-section">
+    <h2>Members</h2>
+    <div class="members-grid">
+        <div class="member-card">
+            <img src="images/ezra.jpg" alt="Ezra">
+            <h3>Ezra Milagrosa Diwa</h3>
+            <p>Leader, Filipino, producer, singer, dancer, creator.</p>
+        </div>
+        <div class="member-card">
+            <img src="images/sally.jpg" alt="Sally">
+            <h3>Sally Armitage</h3>
+            <p>Vocalist, British, lead dancer.</p>
+        </div>
+        <div class="member-card">
+            <img src="images/sariyah.jpg" alt="Sariyah">
+            <h3>Sariyah Lie</h3>
+            <p>Sub-vocalist, Indonesian-Chinese, majestic voice.</p>
+        </div>
+        <div class="member-card">
+            <img src="images/slyvan.jpg" alt="Slyvan">
+            <h3>Slyvan Montgomery</h3>
+            <p>American rapper and dancer.</p>
+        </div>
+        <div class="member-card">
+            <img src="images/lee.jpg" alt="Lee">
+            <h3>Lee Hyun-Seok</h3>
+            <p>South Korean-American, main dancer, raps and disses.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ===== Albums Section ===== -->
+<section id="albums" class="dark-section">
+    <h2>Albums & Singles</h2>
+    <div class="albums-grid">
+        <div class="album-card">
+            <img src="images/dreamweaver.jpg" alt="Dreamweaver">
+            <h3>Dreamweaver (EP)</h3>
+            <ul>
+                <li>Dreamweaver (Title Track)</li>
+                <li>Wave</li>
+                <li>Immutable</li>
+                <li>No-Nonsense</li>
+                <li>Tuonela (B-Side)</li>
+            </ul>
+        </div>
+        <div class="album-card">
+            <img src="images/worlds-stage.jpg" alt="The World's a Stage">
+            <h3>The World's a Stage (Single Album)</h3>
+            <ul>
+                <li>Single Tracks</li>
+            </ul>
+        </div>
+        <div class="album-card">
+            <img src="images/schmetterling.jpg" alt="Schmetterling">
+            <h3>Schmetterling (EP)</h3>
+            <ul>
+                <li>Schmetterling</li>
+                <li>Nothing But My Love</li>
+                <li>Spotlight</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- ===== Pre-save / Social ===== -->
+<section id="presave" class="dark-section">
+    <h2>Pre-Save / Follow</h2>
+    <div class="presave-buttons">
+        <a href="#" class="btn">Spotify</a>
+        <a href="#" class="btn">Apple Music</a>
+        <a href="#" class="btn">YouTube</a>
+    </div>
+    <div class="social-links social">
+        <a href="#">Instagram</a>
+        <a href="#">Twitter</a>
+        <a href="#">TikTok</a>
+    </div>
+</section>
+
+<!-- ===== Contact ===== -->
+<section id="contact" class="dark-section">
+    <h2>Contact</h2>
+    <p>For inquiries, email <a href="mailto:contact@hn-dn.com">contact@hn-dn.com</a></p>
+</section>
+
+<!-- ========== JS Embedded ========== -->
+<script>
+// Smooth Scrolling
+document.querySelectorAll('header nav ul li a').forEach(anchor => {
+    anchor.addEventListener('click', function(e){
+        e.preventDefault();
+        const targetID = this.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetID);
+        if(targetSection){
+            window.scrollTo({top: targetSection.offsetTop - 80, behavior:'smooth'});
+        }
+    });
+});
+
+// Fade-in on Scroll
+const sections = document.querySelectorAll('.dark-section,#home');
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => { if(entry.isIntersecting){ entry.target.classList.add('fade-in'); } });
+},{threshold:0.1});
+sections.forEach(section => observer.observe(section));
+
+// Modals for Members & Albums
+function createModal(title, content, imgSrc){
+    const overlay = document.createElement('div');
+    overlay.style.cssText = "position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.9);display:flex;justify-content:center;align-items:center;z-index:1000;cursor:pointer;";
+    const modal = document.createElement('div');
+    modal.style.cssText = "background:#111;padding:20px;border-radius:10px;max-width:600px;text-align:center;color:#fff;position:relative;";
+    if(imgSrc){const img=document.createElement('img'); img.src=imgSrc; img.style.width='100%'; img.style.height='auto'; img.style.marginBottom='15px'; modal.appendChild(img);}
+    const h=document.createElement('h2'); h.textContent=title; h.style.marginBottom='15px'; modal.appendChild(h);
+    const p=document.createElement('p'); p.innerHTML=content; modal.appendChild(p);
+    overlay.appendChild(modal); document.body.appendChild(overlay);
+    overlay.addEventListener('click',()=>document.body.removeChild(overlay));
+}
+
+document.querySelectorAll('.member-card').forEach(card=>{
+    card.addEventListener('click',()=>{
+        const title=card.querySelector('h3').textContent;
+        const content=card.querySelector('p').innerHTML;
+        const imgSrc=card.querySelector('img').src;
+        createModal(title,content,imgSrc);
+    });
+});
+
+document.querySelectorAll('.album-card').forEach(card=>{
+    card.addEventListener('click',()=>{
+        const title=card.querySelector('h3').textContent;
+        const content=card.querySelector('ul').outerHTML;
+        const imgSrc=card.querySelector('img').src;
+        createModal(title,content,imgSrc);
+    });
+});
+
+// Scroll Indicator Bounce
+const scrollIndicator = document.querySelector('.scroll-indicator');
+if(scrollIndicator){
+    setInterval(()=>{
+        scrollIndicator.style.transform='translateY(-10px)';
+        setTimeout(()=>scrollIndicator.style.transform='translateY(0px)',500);
+    },1000);
+}
+</script>
+
+</body>
+</html>
