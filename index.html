@@ -3,105 +3,108 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HN-DN Official</title>
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@400;700;900&display=swap" rel="stylesheet">
-
-<!-- ========== CSS Embedded ========== -->
+<title>HN-DN | Hundun Chaos</title>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
 <style>
-/* =================== Base Styles =================== */
-* { margin:0; padding:0; box-sizing:border-box; font-family:'Helvetica Neue',Arial,sans-serif; }
-body {
-    background: url('images/concert.gif') no-repeat center center fixed;
-    background-size: cover;
-    position: relative;
-    color:#fff;
-    line-height:1.6;
+/* =================== BASE STYLES =================== */
+* { margin:0; padding:0; box-sizing:border-box; }
+body { 
+    font-family:'Courier Prime', monospace; 
+    color:#fff; 
+    background:url('images/concert.gif') no-repeat center center fixed; 
+    background-size:cover; 
+    position:relative; 
+    overflow-x:hidden;
 }
 body::before {
     content:'';
     position:fixed;
     top:0; left:0;
     width:100%; height:100%;
-    background: rgba(0,0,0,0.65);
+    background: rgba(0,0,0,0.75);
     z-index:-1;
 }
-.dark-section,#header,.hero-content,.members-grid,.albums-grid,.presave-buttons,.social-links,.newsletter-form,#contact { position:relative; z-index:1; }
+/* ========= FADE-IN ========= */
+.fade-in { opacity:1 !important; transform:translateY(0) !important; transition: all 1s ease-out;}
+section, #home { opacity:0; transform:translateY(50px); transition: all 1s ease; }
 
-/* =================== Header =================== */
+/* ========= HEADER ========= */
 header {
-    position: fixed; top:0; width:100%;
-    background: rgba(0,0,0,0.85);
-    display:flex; justify-content:space-between; align-items:center;
-    padding:15px 50px; z-index:999;
-    border-bottom:1px solid #333;
+    position:fixed; top:0; width:100%; display:flex; justify-content:space-between; align-items:center;
+    background: rgba(0,0,0,0.9); padding:15px 60px; border-bottom:1px solid #222; z-index:9999;
+    font-family:'Orbitron',sans-serif;
 }
-header .logo h1 { font-size:32px; color:#fff; font-weight:bold; letter-spacing:2px; }
-header nav ul { list-style:none; display:flex; gap:25px; }
-header nav ul li a { color:#fff; text-decoration:none; font-weight:600; position:relative; padding:5px 0; }
-header nav ul li a::after { content:''; position:absolute; width:0%; height:2px; bottom:0; left:0; background:#fff; transition:0.3s ease; }
+header .logo h1 { font-size:36px; letter-spacing:3px; color:#fff; font-weight:900; text-transform:uppercase; }
+header nav ul { display:flex; gap:30px; list-style:none; }
+header nav ul li a { text-decoration:none; color:#fff; font-weight:700; position:relative; }
+header nav ul li a::after { content:''; position:absolute; width:0%; height:2px; bottom:-3px; left:0; background:#ff6600; transition:0.3s ease; }
 header nav ul li a:hover::after { width:100%; }
 
-/* =================== Hero Section =================== */
-#home { height:100vh; display:flex; justify-content:center; align-items:center; text-align:center; position:relative; }
-.hero-content h2 { font-size:70px; font-weight:900; text-transform:uppercase; letter-spacing:3px; margin-bottom:15px; }
-.hero-content .tagline { font-size:24px; letter-spacing:1px; opacity:0.8; }
-.scroll-indicator { position:absolute; bottom:30px; font-size:28px; opacity:0.7; animation:bounce 2s infinite; }
+/* ========= HERO ========= */
+#home { height:100vh; display:flex; justify-content:center; align-items:center; flex-direction:column; text-align:center; position:relative; }
+.hero-content h2 { font-size:80px; font-weight:900; text-transform:uppercase; letter-spacing:5px; color:#fff; mix-blend-mode:screen; text-shadow: 0 0 20px #ff6600; }
+.hero-content p { font-size:22px; letter-spacing:1px; opacity:0.8; color:#fff; margin-top:15px; }
+.scroll-indicator { position:absolute; bottom:40px; font-size:32px; opacity:0.7; animation:bounce 2s infinite; color:#ff6600;}
 @keyframes bounce {0%,20%,50%,80%,100%{transform:translateY(0);}40%{transform:translateY(-15px);}60%{transform:translateY(-8px);}}
 
-/* =================== Sections =================== */
-.dark-section { padding:100px 50px; background:transparent; }
-.dark-section h2 { font-size:48px; text-align:center; margin-bottom:50px; font-weight:900; text-transform:uppercase; letter-spacing:2px; }
+/* ========= SECTIONS ========= */
+.dark-section { padding:120px 60px; background:transparent; overflow:hidden; position:relative; }
+.dark-section h2 { font-size:50px; text-align:center; margin-bottom:60px; font-weight:900; text-transform:uppercase; letter-spacing:2px; color:#fff; text-shadow: 0 0 15px #ff6600; }
 
-/* =================== Members =================== */
-.members-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:40px; }
-.member-card { background: rgba(255,255,255,0.05); border-radius:10px; overflow:hidden; text-align:center; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor:pointer; }
-.member-card img { width:100%; height:300px; object-fit:cover; transition:transform 0.3s ease; }
-.member-card h3 { font-size:22px; margin:15px 0 10px 0; font-weight:700; }
-.member-card p { font-size:16px; padding:0 15px 15px 15px; color:#ccc; }
-.member-card:hover { transform:translateY(-8px); box-shadow:0 0 20px rgba(255,255,255,0.2); }
-.member-card:hover img { transform:scale(1.02); }
+/* ========= MEMBERS GRID ========= */
+.members-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:50px; }
+.member-card { background: rgba(255,255,255,0.05); border:1px solid #222; border-radius:12px; overflow:hidden; text-align:center; transition:all 0.4s ease; cursor:pointer; position:relative; }
+.member-card::after { content:''; position:absolute; top:0; left:0; width:100%; height:100%; background: linear-gradient(120deg, rgba(255,102,0,0.1), rgba(0,0,0,0.5)); opacity:0; transition:0.5s; }
+.member-card:hover::after { opacity:1; }
+.member-card img { width:100%; height:320px; object-fit:cover; transition: transform 0.5s ease; }
+.member-card h3 { font-size:24px; margin:18px 0 10px 0; font-weight:700; color:#ff6600; text-transform:uppercase; letter-spacing:1px; }
+.member-card p { font-size:16px; color:#ccc; padding:0 15px 15px 15px; }
 
-/* =================== Albums =================== */
-.albums-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:40px; }
-.album-card { background: rgba(255,255,255,0.05); border-radius:10px; overflow:hidden; text-align:center; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor:pointer; }
-.album-card img { width:100%; height:280px; object-fit:cover; transition: transform 0.3s ease; }
-.album-card h3 { font-size:20px; margin:15px 0 10px 0; font-weight:700; }
-.album-card ul { list-style:none; padding:0 15px 15px 15px; color:#ccc; }
-.album-card li { padding:5px 0; border-bottom:1px solid #222; font-size:15px; }
-.album-card:hover { transform:translateY(-8px); box-shadow:0 0 20px rgba(255,255,255,0.2); }
-.album-card:hover img { transform:scale(1.02); }
+/* ========= ALBUMS GRID ========= */
+.albums-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:50px; }
+.album-card { background: rgba(255,255,255,0.05); border:1px solid #222; border-radius:12px; overflow:hidden; text-align:center; cursor:pointer; transition:all 0.4s ease; position:relative; }
+.album-card img { width:100%; height:300px; object-fit:cover; transition:transform 0.4s ease; }
+.album-card h3 { font-size:22px; margin:15px 0 12px 0; font-weight:700; color:#ff6600; }
+.album-card ul { list-style:none; color:#ccc; padding:0 15px 15px 15px; font-size:15px; }
+.album-card li { padding:4px 0; border-bottom:1px solid #222; }
+.album-card:hover img { transform:scale(1.03); }
 
-/* =================== Buttons =================== */
-.presave-buttons, .social-links { display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin-top:20px; }
-.btn, .social a { display:inline-block; padding:12px 25px; border-radius:5px; font-weight:700; text-decoration:none; color:#fff; border:1px solid #fff; transition:all 0.3s ease; background:transparent; }
-.btn:hover, .social a:hover { background:#fff; color:#000; }
+/* ========= BUTTONS ========= */
+.presave-buttons,.social-links { display:flex; justify-content:center; gap:25px; flex-wrap:wrap; margin-top:25px; }
+.btn, .social a { display:inline-block; padding:14px 28px; border-radius:5px; font-weight:700; text-decoration:none; color:#fff; border:1px solid #ff6600; background:transparent; transition: all 0.3s ease; text-transform:uppercase; letter-spacing:1px; }
+.btn:hover,.social a:hover { background:#ff6600; color:#000; }
 
-/* =================== Newsletter =================== */
-.newsletter-form { display:flex; justify-content:center; gap:15px; flex-wrap:wrap; margin-top:20px; }
-.newsletter-form input[type="email"] { padding:12px 20px; border-radius:5px; border:1px solid #fff; background:#111; color:#fff; font-size:16px; outline:none; }
-.newsletter-form input[type="email"]:focus { border-color:#fff; }
+/* ========= NEWSLETTER ========= */
+.newsletter-form { display:flex; justify-content:center; gap:15px; flex-wrap:wrap; margin-top:25px; }
+.newsletter-form input[type="email"] { padding:14px 22px; border-radius:5px; border:1px solid #ff6600; background:#111; color:#fff; font-size:16px; outline:none; }
+.newsletter-form input[type="email"]:focus { border-color:#ff6600; }
 
-/* =================== Footer =================== */
-#contact p a { color:#fff; text-decoration:underline; transition:color 0.3s ease; }
-#contact p a:hover { color:#ccc; }
+/* ========= CONTACT ========= */
+#contact p a { color:#ff6600; text-decoration:underline; transition:color 0.3s ease; }
+#contact p a:hover { color:#fff; }
 
-/* =================== Fade-in =================== */
-.fade-in { opacity:1 !important; transform:translateY(0) !important; transition:all 1s ease-out; }
-.dark-section,#home { opacity:0; transform:translateY(50px); }
+/* ========= HACKED GLITCH ========= */
+.glitch-text { position:relative; color:#fff; font-weight:900; font-size:28px; letter-spacing:2px; animation:glitch 2s infinite; }
+.glitch-text::before, .glitch-text::after { content:attr(data-text); position:absolute; left:0; top:0; width:100%; overflow:hidden; color:#ff6600; clip:rect(0,900px,0,0); }
+.glitch-text::before { animation:glitchTop 2s infinite; }
+.glitch-text::after { animation:glitchBottom 2s infinite; }
+@keyframes glitch { 0%{transform:none;} 20%{transform: skew(-0.5deg,-0.5deg);} 40%{transform: skew(0.5deg,0.5deg);} 60%{transform:none;} 80%{transform: skew(-0.5deg,0.5deg);} 100%{transform:none;} }
+@keyframes glitchTop { 0%{clip:rect(0,9999px,0,0);} 10%{clip:rect(0,9999px,50px,0);} 20%{clip:rect(0,9999px,10px,0);} 30%{clip:rect(0,9999px,40px,0);} 40%{clip:rect(0,9999px,30px,0);} 50%{clip:rect(0,9999px,20px,0);} 60%{clip:rect(0,9999px,60px,0);} 70%{clip:rect(0,9999px,50px,0);} 80%{clip:rect(0,9999px,10px,0);} 90%{clip:rect(0,9999px,40px,0);} 100%{clip:rect(0,9999px,0,0);} }
+@keyframes glitchBottom { 0%{clip:rect(0,9999px,0,0);} 10%{clip:rect(0,9999px,40px,0);} 20%{clip:rect(0,9999px,20px,0);} 30%{clip:rect(0,9999px,30px,0);} 40%{clip:rect(0,9999px,10px,0);} 50%{clip:rect(0,9999px,50px,0);} 60%{clip:rect(0,9999px,20px,0);} 70%{clip:rect(0,9999px,60px,0);} 80%{clip:rect(0,9999px,40px,0);} 90%{clip:rect(0,9999px,10px,0);} 100%{clip:rect(0,9999px,0,0);} }
 
-/* =================== Responsive =================== */
-@media (max-width:768px) {
-    header { flex-direction:column; padding:10px 20px; }
-    header nav ul { flex-direction:column; gap:10px; }
+/* ========= RESPONSIVE ========= */
+@media (max-width:768px){
+    header { flex-direction:column; padding:15px 20px; }
+    header nav ul { flex-direction:column; gap:10px; margin-top:10px; }
     .hero-content h2 { font-size:50px; }
+    .member-card img,.album-card img { height:250px; }
 }
 </style>
 </head>
 <body>
 
-<!-- ===== Header ===== -->
-<header id="header">
+<!-- ===== HEADER ===== -->
+<header>
     <div class="logo"><h1>HN-DN</h1></div>
     <nav>
         <ul>
@@ -114,16 +117,16 @@ header nav ul li a:hover::after { width:100%; }
     </nav>
 </header>
 
-<!-- ===== Hero Section ===== -->
+<!-- ===== HERO ===== -->
 <section id="home">
     <div class="hero-content">
-        <h2>HN-DN</h2>
-        <p class="tagline">Existentialism. Chaos. Music.</p>
+        <h2 class="glitch-text" data-text="HN-DN">HN-DN</h2>
+        <p>Existential Chaos. Mythology. Music.</p>
     </div>
     <div class="scroll-indicator">&#x21E3;</div>
 </section>
 
-<!-- ===== Members Section ===== -->
+<!-- ===== MEMBERS ===== -->
 <section id="members" class="dark-section">
     <h2>Members</h2>
     <div class="members-grid">
@@ -155,7 +158,7 @@ header nav ul li a:hover::after { width:100%; }
     </div>
 </section>
 
-<!-- ===== Albums Section ===== -->
+<!-- ===== ALBUMS ===== -->
 <section id="albums" class="dark-section">
     <h2>Albums & Singles</h2>
     <div class="albums-grid">
@@ -172,7 +175,7 @@ header nav ul li a:hover::after { width:100%; }
         </div>
         <div class="album-card">
             <img src="images/worlds-stage.jpg" alt="The World's a Stage">
-            <h3>The World's a Stage (Single Album)</h3>
+            <h3>The World's a Stage</h3>
             <ul>
                 <li>Single Tracks</li>
             </ul>
@@ -189,7 +192,7 @@ header nav ul li a:hover::after { width:100%; }
     </div>
 </section>
 
-<!-- ===== Pre-save / Social ===== -->
+<!-- ===== PRE-SAVE / SOCIAL ===== -->
 <section id="presave" class="dark-section">
     <h2>Pre-Save / Follow</h2>
     <div class="presave-buttons">
@@ -204,41 +207,39 @@ header nav ul li a:hover::after { width:100%; }
     </div>
 </section>
 
-<!-- ===== Contact ===== -->
+<!-- ===== CONTACT ===== -->
 <section id="contact" class="dark-section">
     <h2>Contact</h2>
-    <p>For inquiries, email <a href="mailto:contact@hn-dn.com">contact@hn-dn.com</a></p>
+    <p>Email us at <a href="mailto:contact@hn-dn.com">contact@hn-dn.com</a></p>
 </section>
 
-<!-- ========== JS Embedded ========== -->
+<!-- ========== JS ========== -->
 <script>
 // Smooth Scrolling
 document.querySelectorAll('header nav ul li a').forEach(anchor => {
-    anchor.addEventListener('click', function(e){
+    anchor.addEventListener('click', e => {
         e.preventDefault();
-        const targetID = this.getAttribute('href').substring(1);
-        const targetSection = document.getElementById(targetID);
-        if(targetSection){
-            window.scrollTo({top: targetSection.offsetTop - 80, behavior:'smooth'});
-        }
+        const targetID = anchor.getAttribute('href').substring(1);
+        const target = document.getElementById(targetID);
+        if(target){ window.scrollTo({top:target.offsetTop-80, behavior:'smooth'}); }
     });
 });
 
-// Fade-in on Scroll
+// Fade-in Sections
 const sections = document.querySelectorAll('.dark-section,#home');
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => { if(entry.isIntersecting){ entry.target.classList.add('fade-in'); } });
 },{threshold:0.1});
 sections.forEach(section => observer.observe(section));
 
-// Modals for Members & Albums
+// Member / Album Modals
 function createModal(title, content, imgSrc){
     const overlay = document.createElement('div');
-    overlay.style.cssText = "position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.9);display:flex;justify-content:center;align-items:center;z-index:1000;cursor:pointer;";
-    const modal = document.createElement('div');
-    modal.style.cssText = "background:#111;padding:20px;border-radius:10px;max-width:600px;text-align:center;color:#fff;position:relative;";
-    if(imgSrc){const img=document.createElement('img'); img.src=imgSrc; img.style.width='100%'; img.style.height='auto'; img.style.marginBottom='15px'; modal.appendChild(img);}
-    const h=document.createElement('h2'); h.textContent=title; h.style.marginBottom='15px'; modal.appendChild(h);
+    overlay.style.cssText="position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.95);display:flex;justify-content:center;align-items:center;z-index:1000;cursor:pointer;";
+    const modal=document.createElement('div');
+    modal.style.cssText="background:#111;padding:25px;border-radius:12px;max-width:650px;text-align:center;color:#fff;position:relative;";
+    if(imgSrc){ const img=document.createElement('img'); img.src=imgSrc; img.style.width='100%'; img.style.height='auto'; img.style.marginBottom='15px'; modal.appendChild(img);}
+    const h=document.createElement('h2'); h.textContent=title; h.style.marginBottom='15px'; h.style.color='#ff6600'; modal.appendChild(h);
     const p=document.createElement('p'); p.innerHTML=content; modal.appendChild(p);
     overlay.appendChild(modal); document.body.appendChild(overlay);
     overlay.addEventListener('click',()=>document.body.removeChild(overlay));
@@ -248,8 +249,8 @@ document.querySelectorAll('.member-card').forEach(card=>{
     card.addEventListener('click',()=>{
         const title=card.querySelector('h3').textContent;
         const content=card.querySelector('p').innerHTML;
-        const imgSrc=card.querySelector('img').src;
-        createModal(title,content,imgSrc);
+        const img=card.querySelector('img').src;
+        createModal(title,content,img);
     });
 });
 
@@ -257,20 +258,16 @@ document.querySelectorAll('.album-card').forEach(card=>{
     card.addEventListener('click',()=>{
         const title=card.querySelector('h3').textContent;
         const content=card.querySelector('ul').outerHTML;
-        const imgSrc=card.querySelector('img').src;
-        createModal(title,content,imgSrc);
+        const img=card.querySelector('img').src;
+        createModal(title,content,img);
     });
 });
 
 // Scroll Indicator Bounce
-const scrollIndicator = document.querySelector('.scroll-indicator');
+const scrollIndicator=document.querySelector('.scroll-indicator');
 if(scrollIndicator){
-    setInterval(()=>{
-        scrollIndicator.style.transform='translateY(-10px)';
-        setTimeout(()=>scrollIndicator.style.transform='translateY(0px)',500);
-    },1000);
+    setInterval(()=>{scrollIndicator.style.transform='translateY(-10px)'; setTimeout(()=>scrollIndicator.style.transform='translateY(0px)',500);},1000);
 }
 </script>
-
 </body>
 </html>
